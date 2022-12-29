@@ -48,7 +48,7 @@ async function deleting(req,res){
 async function getOneProduct(req,res)
 {
     const id = parseInt(req.params.id);
-    let oneProduct = await productCollection.get(id);
-    res.status(200).json(oneProduct);
+    let recored = await productCollection.get(id);
+    res.status(200).json(recored);
 }
 module.exports=productRouter;

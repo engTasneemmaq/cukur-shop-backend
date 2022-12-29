@@ -10,7 +10,7 @@ const signInRouter=require("../src/routes/signInRouter");
 const signUpRouter=require("../src/routes/signUpRouter");
 const secretRouter=require("../src/routes/secretRouter");
 const productRouter = require("../src/routes/productRouter");
-
+const orderRouter = require('./routes/orderRouter')
 
 const app = express();
 app.get("/", (req, res) => {
@@ -32,6 +32,7 @@ app.use(productRouter);
 app.use(signInRouter);
 app.use(signUpRouter);
 app.use(secretRouter);
+app.use(orderRouter);
 
 //error catch
 app.use(errorHandler);

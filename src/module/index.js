@@ -3,6 +3,7 @@ require('dotenv').config();
 const users = require('./users');
 const { Sequelize, DataTypes } = require('sequelize');
 const productModel = require('./product-model');
+const ordersModel = require('./orders-model');
 const DataCollection= require('./Collection');
 
 
@@ -21,18 +22,19 @@ process.env.NODE_ENV === "production"
 let sequelize = new Sequelize(POSTGRES_URI, sequelizeOptions);
 const productsTable = productModel(sequelize, DataTypes);
 const userTable = users(sequelize, DataTypes);
-
+const ordersTable =ordersModel(sequelize, DataTypes);
 console.log(userTable);
 
 const productCollection = new DataCollection(productsTable);
-
+const ordersCollection = new DataCollection(ordersTable);
 
 //relations database
-userTable.hasMany(productsTable); //one user has many product
-productsTable.belongsTo(userTable); //one product has one user
+userTable.hasMany(ordersTable); //one user has many orders
+ordersTable.belongsTo(userTable); // order has one user
 
 module.exports = {
     db: sequelize,
     users: users(sequelize, DataTypes),
     productCollection:productCollection,
+    ordersCollection:ordersCollection,
 };
