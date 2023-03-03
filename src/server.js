@@ -14,7 +14,7 @@ const orderRouter = require('./routes/orderRouter')
 
 const app = express();
 app.get("/", (req, res) => {
-  res.send("Welcome to ToTi Store Server");
+  res.send("Welcome to CUKUR Store Server");
 });
 
 // app.get("/api/products", (req,res)=>{
