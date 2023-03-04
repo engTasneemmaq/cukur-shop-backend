@@ -14,8 +14,6 @@ sequelize.define('products', {
     { type: DataTypes.FLOAT },
     countInStock: 
     { type: DataTypes.INTEGER },
-    brand: 
-    { type: DataTypes.STRING },
     rating: 
     { type: DataTypes.FLOAT },
     numReview: 
