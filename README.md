@@ -1,3 +1,3 @@
 # cukur-shop-backend
 
-# [Railway link](https://cukur-shop-backend-production.up.railway.app/)
+# [Railway link](cukur-shop-backend-production-4b1f.up.railway.app)
