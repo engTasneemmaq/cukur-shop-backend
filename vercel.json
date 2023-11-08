@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "cukur-shop-backend",
+    "name": "cukur-backend",
     "builds": [
         {
             "src": "index.js",
